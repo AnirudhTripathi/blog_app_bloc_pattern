@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 
 class AuthField extends StatelessWidget {
   final String hintText;
-  const AuthField({super.key, required this.hintText});
+  final bool isObscureText;
+  final TextEditingController controller;
+  const AuthField(
+      {super.key,
+      required this.hintText,
+      required this.controller,
+      this.isObscureText = false,});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +20,7 @@ class AuthField extends StatelessWidget {
         }
         return null;
       },
+      obscureText: isObscureText,
     );
   }
 }

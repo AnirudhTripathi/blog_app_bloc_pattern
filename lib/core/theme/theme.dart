@@ -13,6 +13,9 @@ class AppTheme {
       );
   static final darkthemeModd = ThemeData.dark(useMaterial3: true).copyWith(
     scaffoldBackgroundColor: AppPallete.backgroundColor,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: AppPallete.backgroundColor,
+    ),
     inputDecorationTheme: InputDecorationTheme(
       labelStyle: const TextStyle(
         fontSize: 18,

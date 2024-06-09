@@ -2,7 +2,8 @@ import 'package:blog_app/core/theme/app_pallete.dart';
 import 'package:flutter/material.dart';
 
 class AuthButton extends StatelessWidget {
-  const AuthButton({super.key});
+  final String buttonText;
+  const AuthButton({super.key, required this.buttonText});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +13,9 @@ class AuthButton extends StatelessWidget {
         fixedSize: const Size(395, 55),
         backgroundColor: AppPallete.gradient3,
       ),
-      child: const Text(
-        'Sign up',
-        style: TextStyle(
+      child: Text(
+        buttonText,
+        style: const TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w700,
         ),
