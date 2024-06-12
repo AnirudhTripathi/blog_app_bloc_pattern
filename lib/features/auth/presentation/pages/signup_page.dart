@@ -4,6 +4,7 @@ import 'package:blog_app/features/auth/presentation/widgets/auth_button.dart';
 import 'package:blog_app/features/auth/presentation/widgets/auth_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignupPage extends StatefulWidget {
   static route() => MaterialPageRoute(
@@ -73,7 +74,12 @@ class _SignupPageState extends State<SignupPage> {
                 const SizedBox(
                   height: 15,
                 ),
-                const AuthButton(buttonText: "Sign ip"),
+                AuthButton(
+                  buttonText: "Sign Up",
+                  onPressed: () {
+                    if (formKey.currentState!.validate()) {context.read()}
+                  },
+                ),
                 const SizedBox(
                   height: 20,
                 ),

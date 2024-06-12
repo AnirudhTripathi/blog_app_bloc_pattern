@@ -5,9 +5,8 @@ import 'package:blog_app/features/auth/presentation/widgets/auth_field.dart';
 
 import 'package:flutter/material.dart';
 
-
 class LoginPage extends StatefulWidget {
-   static route() => MaterialPageRoute(
+  static route() => MaterialPageRoute(
         builder: (context) => LoginPage(),
       );
   const LoginPage({super.key});
@@ -64,7 +63,10 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 15,
             ),
-            const AuthButton(buttonText: "Sign in"),
+            AuthButton(
+              buttonText: "Sign in",
+              onPressed: () {},
+            ),
             const SizedBox(
               height: 20,
             ),
